@@ -77,6 +77,8 @@ namespace Stg
 	 void AddModel( Model* mod );
 	 void RemoveModel( Model* mod );
 
+  public:
+
 	 Option //showBlinken, 
 		showBBoxes,
 		showBlocks, 
@@ -97,7 +99,6 @@ namespace Stg
 		pCamOn,
 		visualizeAll;
   
-  public:
 	 Canvas( WorldGui* world, int x, int y, int width, int height);
 	 ~Canvas();
   

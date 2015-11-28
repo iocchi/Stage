@@ -1590,6 +1590,9 @@ namespace Stg
     virtual void RemoveChild( Model* mod );	 
 
     bool IsTopView();
+
+    /** set the simulation speedup. */
+    void setSpeedup(double speedup);
   };
 
 

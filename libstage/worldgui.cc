@@ -875,3 +875,11 @@ usec_t WorldGui::RealTimeNow() const
 
 bool WorldGui::IsTopView()
 { return canvas->IsTopView(); }
+
+void WorldGui::setSpeedup(double speedup) {
+  this->speedup = speedup;
+  this->SetTimeouts();
+}
+
+
+
