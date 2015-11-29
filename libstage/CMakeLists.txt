@@ -101,6 +101,6 @@ INSTALL(TARGETS stagebinary stage
 	LIBRARY DESTINATION ${PROJECT_LIB_DIR}
 )
 
-INSTALL(FILES stage.hh 
+INSTALL(FILES stage.hh canvas.hh  option.hh  worldfile.hh
         DESTINATION include/${PROJECT_NAME}-${APIVERSION})
 

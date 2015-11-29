@@ -68,6 +68,10 @@
 #include <GL/glu.h>
 #endif 
 
+// Used to distinguish the new features available
+#define NEW_GUI_ACCESS 1
+
+
 /** @brief The Stage library uses its own namespace */
 namespace Stg 
 {
