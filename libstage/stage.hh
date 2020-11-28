@@ -928,6 +928,8 @@ namespace Stg
 
   public:
 
+    float getSimInterval() { return sim_interval; }
+
     uint64_t UpdateCount(){ return updates; }
 	 
     bool paused; ///< if true, the simulation is stopped
@@ -1595,8 +1597,9 @@ namespace Stg
 
     bool IsTopView();
 
-    /** set the simulation speedup. */
+    /** get/set the simulation speedup. */
     void setSpeedup(double speedup);
+    double getSpeedup();
   };
 
 

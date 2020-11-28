@@ -881,5 +881,8 @@ void WorldGui::setSpeedup(double speedup) {
   this->SetTimeouts();
 }
 
+double WorldGui::getSpeedup() {
+  return this->speedup;
+}
 
 
