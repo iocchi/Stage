@@ -928,7 +928,7 @@ namespace Stg
 
   public:
 
-    float getSimInterval() { return sim_interval; }
+    usec_t getSimInterval() { return sim_interval; }
 
     uint64_t UpdateCount(){ return updates; }
 	 
