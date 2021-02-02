@@ -6,7 +6,8 @@ ModelLightIndicator::ModelLightIndicator( World* world,
 														Model* parent,
 														const std::string& type ) : 
   Model( world, parent, type ),
-  m_IsOn(false)
+  m_IsOn(false),
+  m_intensity_scaleFactor(0.8)
 {
 }
 
@@ -21,6 +22,15 @@ void ModelLightIndicator::SetState(bool isOn)
 	m_IsOn = isOn;
 }
 
+void ModelLightIndicator::SetIntensity(double value)
+{
+    m_intensity_scaleFactor = value;
+}
+
+
+void ModelLightIndicator::ChangeColor(const std::string& cstr) {
+	this->SetColor( Color (cstr) );
+}
 
 void ModelLightIndicator::DrawBlocks()
 {
@@ -30,13 +40,11 @@ void ModelLightIndicator::DrawBlocks()
 	}
 	else
 	  {
-		const double scaleFactor = 0.8;
-		
 		Color keep = this->GetColor();
 		Color c = this->GetColor();
-		c.r *= scaleFactor;
-		c.g *= scaleFactor;
-		c.b *= scaleFactor;
+		c.r *= m_intensity_scaleFactor;
+		c.g *= m_intensity_scaleFactor;
+		c.b *= m_intensity_scaleFactor;
 		
 		this->SetColor( c );
 		Model::DrawBlocks();

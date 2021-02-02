@@ -2533,9 +2533,6 @@ namespace Stg
   };
 
 
-
-  
-
   // Light indicator model
   class ModelLightIndicator : public Model
   {
@@ -2544,14 +2541,19 @@ namespace Stg
 			 Model* parent,
 			 const std::string& type );
     ~ModelLightIndicator();
-  
+
     void SetState(bool isOn);
+
+    void ChangeColor(const std::string& cstr); // light color string
+
+    void SetIntensity(double value); // intensity scale factor (<1.0)
 
   protected:
     virtual void DrawBlocks();
 
   private:
     bool m_IsOn;
+    double m_intensity_scaleFactor;
   };
 
   // \todo  GRIPPER MODEL --------------------------------------------------------
