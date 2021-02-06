@@ -29,6 +29,7 @@ void ModelLightIndicator::SetIntensity(double value)
 
 
 void ModelLightIndicator::ChangeColor(const std::string& cstr) {
+    m_ColorStr = cstr;
 	this->SetColor( Color (cstr) );
 }
 

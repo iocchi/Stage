@@ -2544,6 +2544,8 @@ namespace Stg
 
     void SetState(bool isOn);
 
+    bool GetState() { return m_IsOn; }
+
     void ChangeColor(const std::string& cstr); // light color string
 
     void SetIntensity(double value); // intensity scale factor (<1.0)
@@ -2554,6 +2556,7 @@ namespace Stg
   private:
     bool m_IsOn;
     double m_intensity_scaleFactor;
+    std::string m_ColorStr;
   };
 
   // \todo  GRIPPER MODEL --------------------------------------------------------
